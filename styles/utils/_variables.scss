@@ -1,0 +1,30 @@
+$primary-font: 'Rubik', sans-serif;
+$font-regular: 400;
+$font-bold: 600;
+$font-black: 900;
+
+// Colores
+$palette: (
+    ligth-grey: #F6F6F6,
+
+    medium-grey: #777777,
+    grey: #DADADA,
+    dark-grey: #232323,
+
+    primary-color: #3b3663, //#0a2240,
+    secondary-color: #745BA9,
+    complementary-color: #F2CC16,
+);
+$ligth-grey: map-get($palette,ligth-grey);
+$medium-grey: map-get($palette,medium-grey);
+$grey: map-get($palette,grey);
+$dark-grey: map-get($palette,dark-grey);
+$primary-color: map-get($palette,primary-color);
+$secondary-color: map-get($palette,secondary-color);
+$complementary-color: map-get($palette,complementary-color);
+
+$white:white;
+$black: black;
+//Gradientes
+$primary-gradient: linear-gradient(45deg, #ffffff, #9b93f6);
+$secondary-gradient: linear-gradient(#B6BFC1, #747575);

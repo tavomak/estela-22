@@ -1,0 +1,15 @@
+{
+  "nav_homepage_title": "Home",
+  "nav_services_title": "Services",
+  "nav_blog_title": "Blog",
+  "nav_cases_title": "Cases",
+  "nav_quote_title": "Quote",
+  "nav_contact_title": "Contact",
+  "nav_service_web_title": "Web Development",
+  "nav_service_ecommerce_title": "Ecommerce Development",
+  "nav_service_email_title": "Email Marketing",
+  "nav_service_audit_title": "Performance and SEO audit",
+  "nav_service_sem_title": "Search Engine Marketing",
+  "nav_service_analytics_title": "Business Inteligence"
+
+}
