@@ -1,65 +1,100 @@
 @import '../utils/variables';
 @import '../utils/media';
+@import '../utils/keyframes';
 
 .primaryTitle {
-  font-size: 32px;
-  @include MQ(M) {
-    font-size: 49px;
-  }
-}
-
-.slider{
-  &Title {
-    @include MQ(S) {
-      font-size: 32px !important;
-    }
-    @include MQ(M) {
-      font-size: 45px !important;
-    }
-  }
-  &SubTitle {
-    @include MQ(M) {
-      max-width: 450px;
-    }
-    line-height: 1.18;
-  }
-  &Text {
-    background: $grey;
-    padding: 10px;
-    z-index: 3;
-    text-align: center;
-    @include MQ(M) {
-      background: none;
-      font-size: 1.5em;
+  line-height: .9;
+  & span {
+    color: $primary-color;
+    position: relative;
+    &::before {
+      animation-duration: 6s;
+      animation-iteration-count: infinite;
+      background-clip: text;
       position: absolute;
-      left: 5%;
-      top: 20%;
-      text-align: left;
-    }
-    @include MQ(L) {
-      background: none;
-      top: 25%;
-      left: 10%;
-      text-align: left;
-    }
-    @include MQ(1700px) {
-      background: none;
-      top: 25%;
-      left: 12%;
-      text-align: left;
+      -webkit-text-fill-color: transparent;
+      height: 100%;
     }
   }
 }
 
-.reviewCard {
-  border-radius: 25px;
-  background: $secondary-color;
-  height: 100%;
-  overflow: hidden;
-  box-sizing: border-box;
+.firstLetter{
+  letter-spacing: 1px;
+  &::before {
+    content: 'Digital';
+    animation-name: a;
+    background: linear-gradient(75deg,#6010c9,#d228de 80%);
+    letter-spacing: 1px;
+  }
 }
 
-.firstsCards {
-  border-radius: 25px;
-  height: 100%;
+.secondLetter::before {
+  content: 'Marketing';
+  animation-name: b;
+  background: linear-gradient(75deg,#0da9c1,#4f21e6 80%);
+}
+
+.tirdLetter::before {
+  content: 'Services';
+  animation-name: c;
+  background: linear-gradient(75deg,#FF4969,#FC9D44 80%);
+}
+
+.imageWrap {
+  position: relative;
+}
+
+.objOne {
+  animation: movedelement 10s linear infinite;
+  position: absolute;
+
+  width: 14%;
+  top: 33%;
+  left: 0;
+
+}
+
+.objTwo {
+  animation: movedelement3 10s linear infinite;
+  position: absolute;
+
+  width: 14%;
+  top: 15%;
+  left: 9%;
+}
+
+.objThree {
+  animation: movedelement2 10s linear infinite;
+  position: absolute;
+
+  width:15%;
+  top: 3%;
+  left: 30%;
+}
+
+.objFour {
+  animation: movedelement 10s linear infinite;
+  position: absolute;
+
+  width: 15%;
+  top: 2%;
+  right: 35%;
+}
+
+.objFive {
+  animation: movedelement2 10s linear infinite;
+  position: absolute;
+
+  width: 17%;
+  top: 15%;
+  right: 10%;
+}
+
+.objSix {
+  animation: movedelement3 10s linear infinite;
+  position: absolute;
+
+  width: 23%;
+  top: 33%;
+  right: 1%;
 }

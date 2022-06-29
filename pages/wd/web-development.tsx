@@ -7,7 +7,7 @@ import Audit from 'components/Molecules/Audit';
 const WebDevelopment: NextPage = () => {
   const [data, setData] = useState(null);
   return (
-    <Layout fluid>
+    <Layout container>
       <>
         {!data && (
           <>

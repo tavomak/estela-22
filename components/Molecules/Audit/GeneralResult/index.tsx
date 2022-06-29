@@ -3,7 +3,6 @@ import { ApexOptions } from 'apexcharts';
 import { getColorSchema, getColorText } from 'helpers';
 
 const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
-// import Chart from 'react-apexcharts';
 
 type Props = {
   categories: object[],
@@ -41,7 +40,7 @@ const GeneralResult = ({ categories }: Props) => {
             fontSize: '12px',
           },
           value: {
-            formatter: (val) => parseInt(val),
+            formatter: (val) => val.toString(),
             fontSize: '42px',
             show: true,
           },

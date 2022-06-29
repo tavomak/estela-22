@@ -66,3 +66,11 @@ export function getColorText(value: number) {
   }
   return color;
 }
+
+export function toRoute(string: string) {
+  return string.toLowerCase();
+}
+
+export function toSlug(string: string) {
+  return string.toLowerCase().replaceAll(' ', '-');
+}

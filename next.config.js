@@ -7,6 +7,17 @@ const nextConfig = {
       'localhost',
     ],
   },
+  // async rewrites() {
+  //   return {
+  //     beforeFiles: [
+  //       {
+  //         source: '/es/servicios',
+  //         destination: '/en/services',
+  //         locale: false,
+  //       },
+  //     ],
+  //   };
+  // },
 };
 
 module.exports = nextConfig;

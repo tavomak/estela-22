@@ -2,13 +2,15 @@ import { useState, useEffect, useRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import { FaChevronDown } from 'react-icons/fa';
 import { useRouter } from 'next/router';
+import { toSlug } from 'helpers';
 import useTranslation from 'next-translate/useTranslation';
 import Link from 'next/link';
 import Image from 'next/image';
+import LocaleSwich from 'components/Molecules/LocaleSwich';
 import styles from './styles.module.scss';
 
 const Navbar = () => {
-  const { locale: activeLocale, locales, asPath } = useRouter();
+  const { locale: activeLocale } = useRouter();
   const { t } = useTranslation('common');
   const links = [
     {
@@ -17,26 +19,26 @@ const Navbar = () => {
     },
     {
       name: t('nav_services_title'),
-      route: '/servicios',
+      route: '/services',
       children: [
         {
           name: t('nav_service_web_title'),
-          route: '/servicios/web-development',
+          route: 'web-development',
         },
         {
           name: t('nav_service_email_title'),
-          route: '/servicios/factoring-web',
+          route: 'email-marketing',
         },
         {
           name: t('nav_service_audit_title'),
-          route: '/servicios/factoring-web',
+          route: 'performance-seo',
         },
         {
           name: t('nav_service_sem_title'),
-          route: '/servicios/leasing',
+          route: 'search-engine-marketing',
         }, {
           name: t('nav_service_analytics_title'),
-          route: '/servicios/leaseback',
+          route: 'business-intelligence',
         },
       ],
     },
@@ -46,22 +48,21 @@ const Navbar = () => {
     },
     {
       name: t('nav_cases_title'),
-      route: '/blog',
+      route: 'cases',
     },
     {
       name: t('nav_quote_title'),
-      route: '/blog',
+      route: 'quote',
     },
     {
       name: t('nav_contact_title'),
-      route: '/contacto',
+      route: 'contact',
     },
   ];
   const [menuOpen, setMenuOpen] = useState(false);
   const [showSubMenu, setShowSubMenu] = useState(false);
   const [topView, setTopView] = useState(0);
   const nodeRef = useRef(null);
-  const avaiableLocales = locales.filter((locale) => locale !== activeLocale);
 
   const handleMouseEnter = (e, selected) => {
     e.preventDefault();
@@ -134,15 +135,7 @@ const Navbar = () => {
                   )}
                 </li>
               ))}
-              {avaiableLocales.map((locale) => (
-                <li key={locale}>
-                  <Link href={asPath} locale={locale}>
-                    <a href="!#">
-                      {locale.toUpperCase()}
-                    </a>
-                  </Link>
-                </li>
-              ))}
+              <LocaleSwich />
             </ul>
           </div>
         </div>

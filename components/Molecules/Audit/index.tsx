@@ -34,6 +34,7 @@ const Audit = ({ url, device = 'desktop' }: Props) => {
   const { locale: activeLocale } = useRouter();
   const API = `${process.env.NEXT_PUBLIC_PAGE_SPEED_BASE_URL}?url=https://${finalUrl}&locale=${activeLocale}&${category}&strategy=${device}&key=${process.env.NEXT_PUBLIC_PAGE_SPEED_API_KEY}`;
   const { data, error } = useSWR(API, fetcher, revalidation);
+
   const [categories, setCategories] = useState([]);
   const [audit, setAudit] = useState([]);
   const [errorMessage, setErrorMessage] = useState('');
@@ -52,18 +53,8 @@ const Audit = ({ url, device = 'desktop' }: Props) => {
     }
   }, [data, error]);
 
-  useEffect(() => {
-    const newCategories = categories.map((item) => item[1].auditRefs)[0].map((item) => item.id);
-    console.log(newCategories);
-    const newAudit = audit
-      .map((item) => item[1])
-      .filter((score) => (score.score !== null && score.score < 0.7))
-      .filter((item) => newCategories.includes(item.id));
-    console.log(newAudit);
-  }, [categories, audit]);
-
   if (error) return <div>Ha habido un error con la url ingresada</div>;
-  if (!data) return <div className="text-center"><iframe src="https://giphy.com/embed/RHEqKwRZDwFKE" width="480" height="204" frameBorder="0" allowFullScreen></iframe></div>;
+  if (!data) return <div className="text-center"><iframe title="LoadingBar" src="https://giphy.com/embed/RHEqKwRZDwFKE" width="480" height="204" frameBorder="0" allowFullScreen /></div>;
   if (errorMessage.length > 0) return <div>{errorMessage}</div>;
   return (
     <>

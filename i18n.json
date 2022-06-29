@@ -2,7 +2,9 @@
 {
   "locales": ["es", "en"],
   "defaultLocale": "es",
+  "localeDetection": false,
   "pages": {
-    "*": ["common"]
+    "*": ["common"],
+    "/[service]": ["services"]
   }
 }
