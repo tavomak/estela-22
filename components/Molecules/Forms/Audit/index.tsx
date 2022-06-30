@@ -1,4 +1,4 @@
-import { useState, useId } from 'react';
+import React, { useState, useId } from 'react';
 import Button from 'components/Atoms/Button';
 
 type Props = {
@@ -21,7 +21,10 @@ const FormAudit = ({ setData }: Props) => {
   return (
     <form onSubmit={handleSubmit}>
       <h2>Get Free SEO Analysis</h2>
-      <p>Ne summo dictas pertinacia nam. Illum cetero vocent ei vim, case regione signiferumque vim te.</p>
+      <p>
+        Ne summo dictas pertinacia nam. Illum cetero
+        vocent ei vim, case regione signiferumque vim te.
+      </p>
       <div className="row g3 align-items-center mb-4">
         <div className="col">
           <input

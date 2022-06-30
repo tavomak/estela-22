@@ -7,10 +7,10 @@ const config = {
 
 describe('Layout', () => {
   test('Render', () => {
-    render(<Layout>{config.children}</Layout>)
+    render(<Layout>{config.children}</Layout>);
 
-    const main = screen.getByTestId('main')
+    const main = screen.getByTestId('main');
 
-    espect(main).toContainElement()
-  })
-})
+    expect(main).toContainElement();
+  });
+});

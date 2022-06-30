@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './styles.module.scss';
 
 const Modal = ({
-  children, onClick, showModal, size, bgColor, noPadding
+  children, onClick, showModal, size, bgColor, noPadding,
 }) => (
   <CSSTransition
     in={showModal}

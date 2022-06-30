@@ -14,7 +14,7 @@ const revalidation = {
   revalidateOnReconnect: false,
 };
 
-const fetcher = async (...args) => fetch(...args).then((res) => res.json());
+const fetcher = async (args) => fetch(args).then((res) => res.json());
 
 // const fetcher = async (stringValue) => {
 //   const res = await fetch(stringValue);

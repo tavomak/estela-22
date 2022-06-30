@@ -1,3 +1,4 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 
 type Props = {
@@ -6,8 +7,8 @@ type Props = {
   className: string,
   submit: boolean,
   onClick: React.MouseEventHandler<HTMLButtonElement>,
-  imgPrev: JSX.Element,
-  imgNext: JSX.Element,
+  imgPrev: React.ReactNode,
+  imgNext: React.ReactNode,
   disabled: boolean | null,
 }
 const ButtonSubmit = ({

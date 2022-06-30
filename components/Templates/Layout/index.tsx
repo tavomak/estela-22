@@ -1,3 +1,4 @@
+import React from 'react';
 import Head from 'next/head';
 import PropTypes from 'prop-types';
 import { ToastContainer } from 'react-toastify';
@@ -5,7 +6,7 @@ import Navbar from 'components/Molecules/Navbar';
 import Footer from 'components/Molecules/Footer';
 
 type Props = {
-  children: JSX.Element,
+  children: React.ReactNode,
   className: string,
   description: string,
   title: string,

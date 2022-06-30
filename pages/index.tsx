@@ -69,7 +69,13 @@ const Home: NextPage = () => (
             <div className="col-md-6">
               <h2 className="fs-5 m-0">WHY CHOOSE US</h2>
               <h2 className="font-bold">Boosts Your Website Traffic!</h2>
-              <p>We are passionate about our work. Our designers stay ahead of the curve to provide engaging and user-friendly website designs to make your business stand out. Our developers are committed to maintaining the highest web standards so that your site will withstand the test of time. We care about your business, which is why we work with you.</p>
+              <p>
+                We are passionate about our work. Our designers stay ahead of the curve to provide
+                engaging and user-friendly website designs to make your business stand out.
+                Our developers are committed to maintaining the highest web standards so that your
+                site will withstand the test of time. We care about your business,
+                which is why we work with you.
+              </p>
               <Button className="btn btn-primary btn-outline" text="Discover more" />
             </div>
             <div className="col-md-6">
@@ -112,7 +118,12 @@ const Home: NextPage = () => (
             <div className="col-md-6">
               <h2 className="fs-5 m-0">WHY CHOOSE US</h2>
               <h2 className="font-bold">Boosts Your Website Traffic!</h2>
-              <p>Diseñamos y desarrollamos servicios que faciliten a personas mostrarse, comunicarse y crecer haciendo uso de la tecnología y los medios digitales. Creemos que las personas felices aseguran negocios saludables, un proyecto exitoso comienza y termina con confianza y una estrecha colaboración.</p>
+              <p>
+                Diseñamos y desarrollamos servicios que faciliten a personas mostrarse,
+                comunicarse y crecer haciendo uso de la tecnología y los medios digitales.
+                Creemos que las personas felices aseguran negocios saludables, un proyecto
+                exitoso comienza y termina con confianza y una estrecha colaboración.
+              </p>
               <Button className="btn btn-primary btn-outline" text="Discover more" />
             </div>
 

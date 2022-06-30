@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import { FaChevronDown } from 'react-icons/fa';
 import { useRouter } from 'next/router';
-import { toSlug } from 'helpers';
 import useTranslation from 'next-translate/useTranslation';
 import Link from 'next/link';
 import Image from 'next/image';
